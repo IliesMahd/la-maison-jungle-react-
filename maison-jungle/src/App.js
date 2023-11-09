@@ -1,4 +1,5 @@
-import { Header } from "./Components/Header";
+import { Header } from "./components/Header";
+import './styles/variables.scss';
 
 function App() {
   return (
