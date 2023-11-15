@@ -1,4 +1,5 @@
 import '../styles/Header.scss'
+import logo from '../assets/leaf.png'
 
 export function Header () {
     const title = "La maison jungle"
@@ -23,7 +24,7 @@ export function Header () {
     return (
         <div className="container">
             <div className="wrapper-logo">
-                <img src="../assets/leaf.png"/>
+                <img src={logo} alt='logo'/>
                 <h1>{title}</h1>
             </div>
             <div className="wrapper-navigation">

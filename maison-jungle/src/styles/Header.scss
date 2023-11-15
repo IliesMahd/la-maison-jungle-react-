@@ -1,7 +1,7 @@
 .container {
     width: 100vw;
     height: 10vh;
-    background: red;
+    // background: red;
     display: grid;
     grid-template-columns: 20% 60% 20%;
 
@@ -9,12 +9,16 @@
         grid-column: 1/2;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
+
+        img {
+            width: 15%;
+        }
     }
 
     .wrapper-navigation {
         grid-column: 2/3;
-        background: orange;
+        // background: orange;
         display: flex;
         justify-content: center;
         align-items: center;
