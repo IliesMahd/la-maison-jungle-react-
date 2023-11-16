@@ -11,7 +11,9 @@ export function ShoppingList() {
         <ul>
             {
                 plantList.map((plant) => {
-                    <li>{plant}</li>
+                    return (
+                        <li>{plant}</li>
+                    )
                 })
             }
         </ul>

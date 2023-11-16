@@ -1,5 +1,6 @@
 import '../styles/Header.scss'
 import logo from '../assets/leaf.png'
+import { Link } from 'react-router-dom'
 
 export function Header () {
     const title = "La maison jungle"
@@ -23,19 +24,21 @@ export function Header () {
     ]
     return (
         <div className="container">
-            <div className="wrapper-logo">
-                <img src={logo} alt='logo'/>
-                <h1>{title}</h1>
-            </div>
-            <div className="wrapper-navigation">
-                <ul>
-                    {
-                        navItems.map((item, index) => (
-                            <li key={index}>{item.label}</li>
-                        ))
-                    }
-                </ul>
-            </div>
+        <div className="wrapper-logo">
+          <img src={logo} alt='logo' />
+          <h1>{title}</h1>
         </div>
+        <div className="wrapper-navigation">
+          <ul>
+            {navItems.map((item, index) => {
+              return (
+                <li key={index}>
+                  <Link to={item.path}>{item.label}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
     )
 }
