@@ -22,6 +22,18 @@ export function Header () {
             path: '/contact'
         },
     ]
+
+    const actionItems = [
+      {
+        icon: '',
+        path: '/cart'
+      },
+      {
+        icon: '',
+        path: '/login'
+      }
+    ]
+
     return (
         <div className="container">
         <div className="wrapper-logo">
@@ -36,6 +48,17 @@ export function Header () {
                   <Link to={item.path}>{item.label}</Link>
                 </li>
               );
+            })}
+          </ul>
+        </div>
+        <div className="wrapper-actions">
+          <ul>
+            {actionItems.map((item, index) => {
+              return (
+                <li key={index}>
+                  <Link to={item.path}>{item.icon}</Link>
+                </li>
+              )
             })}
           </ul>
         </div>
